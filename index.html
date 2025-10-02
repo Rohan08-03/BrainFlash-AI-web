@@ -14,54 +14,93 @@
         <!-- HERO SECTION -->
         <div class="header">
             <h1>🧠 BrainFlash AI</h1>
-            <p>Transform your notes into smart flashcards with AI</p>
-            <p><strong>Now available on Google Play Store!</strong></p>
+            <p>Transform your notes into smart flashcards with AI-powered learning</p>
+            <span class="subtitle">Now available on Google Play Store!</span>
+            <br>
             <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large">
                 <i class="fas fa-download"></i> Download Now
             </a>
         </div>
 
-        <!-- FEATURE SHOWCASE -->
-        <div class="card">
-            <h3><i class="fas fa-edit"></i> Smart Notes</h3>
-            <p>Create and organize your study notes with our beautiful, intuitive interface</p>
+        <!-- FEATURES GRID -->
+        <div class="features-grid">
+            <div class="card">
+                <h3><i class="fas fa-edit"></i> Smart Notes</h3>
+                <p>Create and organize your study notes with our beautiful, intuitive interface designed for focus and productivity.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-bolt"></i> AI-Powered Flashcards</h3>
+                <p>Automatically generate intelligent study flashcards from your notes using advanced AI technology.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-brain"></i> Study Mode</h3>
+                <p>Interactive learning experience with flip cards, progress tracking, and smart repetition system.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3><i class="fas fa-bolt"></i> AI-Powered Flashcards</h3>
-            <p>Automatically generate study flashcards from your notes using advanced AI</p>
-        </div>
-
-        <div class="card">
-            <h3><i class="fas fa-brain"></i> Study Mode</h3>
-            <p>Interactive learning with flip cards, progress tracking, and smart repetition</p>
-        </div>
-
-        <!-- APP PREVIEW -->
-        <div class="card">
-            <h3><i class="fas fa-mobile-alt"></i> App Preview</h3>
+        <!-- SCREENSHOTS -->
+        <div class="screenshots-section">
+            <h2>App Preview</h2>
             <p>Beautiful, dark-themed interface designed for focused studying</p>
-            <!-- Add your app screenshots here -->
-            <div class="screenshots">
-                <img src="screenshot1.png" alt="Notes Screen">
-                <img src="screenshot2.png" alt="Flashcards Screen">
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-container">
+                    <img src="screenshot1.jpg" alt="Notes Screen" onerror="this.style.display='none'">
+                    <div class="screenshot-label">Notes Interface</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="screenshot2.jpg" alt="Flashcards Screen" onerror="this.style.display='none'">
+                    <div class="screenshot-label">Study Mode</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="screenshot3.jpg" alt="AI Generation" onerror="this.style.display='none'">
+                    <div class="screenshot-label">AI Flashcards</div>
+                </div>
+            </div>
+            
+            <!-- Fallback if no screenshots -->
+            <div id="screenshot-fallback" style="display: none;">
+                <div class="card">
+                    <p>📱 <em>App screenshots coming soon! The app features a beautiful dark theme with purple accents, intuitive note-taking, and AI-powered flashcard generation.</em></p>
+                </div>
             </div>
         </div>
 
         <!-- DOWNLOAD CTA -->
         <div class="download-section">
-            <h2>Ready to boost your learning?</h2>
-            <p>Download BrainFlash AI now and transform how you study!</p>
+            <h2>Ready to Transform Your Learning?</h2>
+            <p>Join thousands of students boosting their study efficiency with BrainFlash AI</p>
             <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large">
                 <i class="fab fa-google-play"></i> Get it on Google Play
             </a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Free download • No ads • Privacy focused</p>
         </div>
 
         <!-- FOOTER -->
-        <footer style="margin-top: 4rem; color: var(--text-secondary);">
+        <footer>
             <p>Made with ❤️ by Rohan Tiwari</p>
-            <p>Version 1.0</p>
+            <p>Version 1.0 • BrainFlash AI</p>
         </footer>
     </div>
+
+    <script>
+        // Hide fallback if screenshots exist
+        window.addEventListener('load', function() {
+            const images = document.querySelectorAll('.screenshot-container img');
+            let hasScreenshots = false;
+            
+            images.forEach(img => {
+                if (img.naturalWidth > 0) {
+                    hasScreenshots = true;
+                }
+            });
+            
+            if (!hasScreenshots) {
+                document.getElementById('screenshot-fallback').style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
