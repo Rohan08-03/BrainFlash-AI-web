@@ -375,3 +375,52 @@ footer {
         height: 400px;
     }
 }
+/* Screenshot Container */
+.screenshot-container {
+    text-align: center;
+}
+
+/* App Screenshots Styling */
+.app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures images don't get stretched */
+    border-radius: 14px; /* Slightly less than phone-screen radius */
+    display: block;
+}
+
+/* Phone frame adjustments for screenshots */
+.phone-frame .phone-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Ensure fallback screens are properly sized */
+.phone-screen .app-screen {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Responsive screenshot sizing */
+@media (max-width: 768px) {
+    .phone-frame {
+        width: 220px;
+    }
+    
+    .phone-screen {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-frame {
+        width: 200px;
+    }
+    
+    .phone-screen {
+        height: 350px;
+    }
+}
