@@ -17,7 +17,7 @@
             <p>Transform your notes into smart flashcards with AI-powered learning</p>
             <span class="subtitle">Now available on Google Play Store!</span>
             <br>
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large">
+            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large btn-primary">
                 <i class="fas fa-download"></i> Download Now
             </a>
         </div>
@@ -40,30 +40,76 @@
             </div>
         </div>
 
-        <!-- SCREENSHOTS -->
+        <!-- SCREENSHOTS SECTION -->
         <div class="screenshots-section">
-            <h2>App Preview</h2>
-            <p>Beautiful, dark-themed interface designed for focused studying</p>
+            <h2>📱 App Preview</h2>
+            <p>Experience the same beautiful dark theme as in the app</p>
             
             <div class="screenshots-grid">
+                <!-- Option 1: Use your actual screenshots (properly sized) -->
                 <div class="screenshot-container">
-                    <img src="screenshot1.jpg" alt="Notes Screen" onerror="this.style.display='none'">
-                    <div class="screenshot-label">Notes Interface</div>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="screenshot1.jpg" alt="Notes Screen" class="app-screenshot" 
+                                 onerror="this.style.display='none'; document.getElementById('fallback-1').style.display='block';">
+                            <!-- Fallback if screenshot doesn't load -->
+                            <div id="fallback-1" class="app-screen notes-screen" style="display: none;">
+                                <div class="screen-header">
+                                    <i class="fas fa-book"></i>
+                                    <span>My Notes</span>
+                                </div>
+                                <div class="note-item">
+                                    <div class="note-title">Biology Notes</div>
+                                    <div class="note-preview">Cell structure and functions...</div>
+                                </div>
+                                <div class="note-item">
+                                    <div class="note-title">Physics Formulas</div>
+                                    <div class="note-preview">Kinematics and dynamics...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-label">Notes Interface</div>
                 </div>
+                
                 <div class="screenshot-container">
-                    <img src="screenshot2.jpg" alt="Flashcards Screen" onerror="this.style.display='none'">
-                    <div class="screenshot-label">Study Mode</div>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="screenshot2.jpg" alt="Study Mode" class="app-screenshot"
+                                 onerror="this.style.display='none'; document.getElementById('fallback-2').style.display='block';">
+                            <!-- Fallback if screenshot doesn't load -->
+                            <div id="fallback-2" class="app-screen flashcards-screen" style="display: none;">
+                                <div class="flashcard-preview">
+                                    <div class="flashcard-question">What is the powerhouse of the cell?</div>
+                                    <div class="flashcard-hint">Tap to reveal answer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-label">Study Mode</div>
                 </div>
+                
                 <div class="screenshot-container">
-                    <img src="screenshot3.jpg" alt="AI Generation" onerror="this.style.display='none'">
-                    <div class="screenshot-label">AI Flashcards</div>
-                </div>
-            </div>
-            
-            <!-- Fallback if no screenshots -->
-            <div id="screenshot-fallback" style="display: none;">
-                <div class="card">
-                    <p>📱 <em>App screenshots coming soon! The app features a beautiful dark theme with purple accents, intuitive note-taking, and AI-powered flashcard generation.</em></p>
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="screenshot3.jpg" alt="AI Generation" class="app-screenshot"
+                                 onerror="this.style.display='none'; document.getElementById('fallback-3').style.display='block';">
+                            <!-- Fallback if screenshot doesn't load -->
+                            <div id="fallback-3" class="app-screen ai-screen" style="display: none;">
+                                <div class="ai-generating">
+                                    <i class="fas fa-bolt"></i>
+                                    AI Generating Flashcards
+                                </div>
+                                <div class="ai-progress">
+                                    <div class="ai-progress-fill"></div>
+                                </div>
+                                <div style="color: var(--text-secondary); font-size: 14px;">
+                                    Creating 5 smart flashcards...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-label">AI Power</div>
                 </div>
             </div>
         </div>
@@ -72,7 +118,7 @@
         <div class="download-section">
             <h2>Ready to Transform Your Learning?</h2>
             <p>Join thousands of students boosting their study efficiency with BrainFlash AI</p>
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large">
+            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large btn-primary">
                 <i class="fab fa-google-play"></i> Get it on Google Play
             </a>
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Free download • No ads • Privacy focused</p>
@@ -86,20 +132,15 @@
     </div>
 
     <script>
-        // Hide fallback if screenshots exist
+        // Auto-fallback if no screenshots are provided
         window.addEventListener('load', function() {
-            const images = document.querySelectorAll('.screenshot-container img');
-            let hasScreenshots = false;
-            
-            images.forEach(img => {
-                if (img.naturalWidth > 0) {
-                    hasScreenshots = true;
+            const screenshots = document.querySelectorAll('.app-screenshot');
+            screenshots.forEach((img, index) => {
+                if (!img.complete || img.naturalWidth === 0) {
+                    img.style.display = 'none';
+                    document.getElementById(`fallback-${index + 1}`).style.display = 'block';
                 }
             });
-            
-            if (!hasScreenshots) {
-                document.getElementById('screenshot-fallback').style.display = 'block';
-            }
         });
     </script>
 </body>
