@@ -17,7 +17,7 @@
             <p>Transform your notes into smart flashcards with AI-powered learning</p>
             <span class="subtitle">Now available on Google Play Store!</span>
             <br>
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large btn-primary">
+            <a href="https://play.google.com/store/apps/details?id=com.ttech.brainflashai" class="btn btn-large btn-primary">
                 <i class="fas fa-download"></i> Download Now
             </a>
         </div>
@@ -25,34 +25,47 @@
         <!-- FEATURES GRID -->
         <div class="features-grid">
             <div class="card">
-                <h3><i class="fas fa-edit"></i> Smart Notes</h3>
-                <p>Create and organize your study notes with our beautiful, intuitive interface designed for focus and productivity.</p>
+                <h3><i class="fas fa-folder"></i> Smart Organization</h3>
+                <p>Organize notes with 5 categories: Study, Work, Personal, Ideas, and Other. Filter and find anything instantly.</p>
             </div>
 
             <div class="card">
                 <h3><i class="fas fa-bolt"></i> AI-Powered Flashcards</h3>
-                <p>Automatically generate intelligent study flashcards from your notes using advanced AI technology.</p>
+                <p>Automatically generate 5 intelligent study flashcards from your notes using advanced AI technology.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-edit"></i> Edit Anytime</h3>
+                <p>Update your notes whenever you need. Changes are saved instantly with full edit history tracking.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-share-alt"></i> Export & Share</h3>
+                <p>Export individual notes as formatted text files. Share via WhatsApp, email, or save to cloud storage.</p>
             </div>
 
             <div class="card">
                 <h3><i class="fas fa-brain"></i> Study Mode</h3>
-                <p>Interactive learning experience with flip cards, progress tracking, and smart repetition system.</p>
+                <p>Interactive flashcard experience with tap-to-reveal answers, progress tracking, and navigation controls.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-lock"></i> Privacy First</h3>
+                <p>All notes stored locally on your device. No account required, no tracking, complete privacy control.</p>
             </div>
         </div>
 
         <!-- SCREENSHOTS SECTION -->
         <div class="screenshots-section">
             <h2>📱 App Preview</h2>
-            <p>Experience the same beautiful dark theme as in the app</p>
+            <p>Experience the beautiful cosmic-themed interface</p>
             
             <div class="screenshots-grid">
-                <!-- Option 1: Use your actual screenshots (properly sized) -->
                 <div class="screenshot-container">
                     <div class="phone-frame">
                         <div class="phone-screen">
                             <img src="screenshot1.jpg" alt="Notes Screen" class="app-screenshot" 
                                  onerror="this.style.display='none'; document.getElementById('fallback-1').style.display='block';">
-                            <!-- Fallback if screenshot doesn't load -->
                             <div id="fallback-1" class="app-screen notes-screen" style="display: none;">
                                 <div class="screen-header">
                                     <i class="fas fa-book"></i>
@@ -60,16 +73,18 @@
                                 </div>
                                 <div class="note-item">
                                     <div class="note-title">Biology Notes</div>
+                                    <div class="note-category">Study</div>
                                     <div class="note-preview">Cell structure and functions...</div>
                                 </div>
                                 <div class="note-item">
                                     <div class="note-title">Physics Formulas</div>
+                                    <div class="note-category">Study</div>
                                     <div class="note-preview">Kinematics and dynamics...</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mockup-label">Notes Interface</div>
+                    <div class="mockup-label">Organized Notes</div>
                 </div>
                 
                 <div class="screenshot-container">
@@ -77,7 +92,6 @@
                         <div class="phone-screen">
                             <img src="screenshot2.jpg" alt="Study Mode" class="app-screenshot"
                                  onerror="this.style.display='none'; document.getElementById('fallback-2').style.display='block';">
-                            <!-- Fallback if screenshot doesn't load -->
                             <div id="fallback-2" class="app-screen flashcards-screen" style="display: none;">
                                 <div class="flashcard-preview">
                                     <div class="flashcard-question">What is the powerhouse of the cell?</div>
@@ -86,30 +100,61 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mockup-label">Study Mode</div>
+                    <div class="mockup-label">AI Study Mode</div>
                 </div>
                 
                 <div class="screenshot-container">
                     <div class="phone-frame">
                         <div class="phone-screen">
-                            <img src="screenshot3.jpg" alt="AI Generation" class="app-screenshot"
+                            <img src="screenshot3.jpg" alt="Categories" class="app-screenshot"
                                  onerror="this.style.display='none'; document.getElementById('fallback-3').style.display='block';">
-                            <!-- Fallback if screenshot doesn't load -->
                             <div id="fallback-3" class="app-screen ai-screen" style="display: none;">
                                 <div class="ai-generating">
-                                    <i class="fas fa-bolt"></i>
-                                    AI Generating Flashcards
+                                    <i class="fas fa-tags"></i>
+                                    Categories
                                 </div>
-                                <div class="ai-progress">
-                                    <div class="ai-progress-fill"></div>
-                                </div>
-                                <div style="color: var(--text-secondary); font-size: 14px;">
-                                    Creating 5 smart flashcards...
+                                <div style="color: var(--text-secondary); font-size: 14px; margin-top: 1rem;">
+                                    Study • Work • Personal • Ideas
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mockup-label">AI Power</div>
+                    <div class="mockup-label">Smart Organization</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW FEATURES HIGHLIGHT -->
+        <div class="whats-new">
+            <h2>✨ What's New in v1.1.0</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fas fa-folder-open"></i>
+                    <div>
+                        <strong>Note Categories</strong>
+                        <p>Organize with 5 smart categories and quick filters</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-pen"></i>
+                    <div>
+                        <strong>Edit Notes</strong>
+                        <p>Update your notes anytime with full edit functionality</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-export"></i>
+                    <div>
+                        <strong>Export & Share</strong>
+                        <p>Export individual notes as formatted text files</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-question-circle"></i>
+                    <div>
+                        <strong>Help Guide</strong>
+                        <p>Comprehensive in-app help and usage tips</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,17 +162,21 @@
         <!-- DOWNLOAD CTA -->
         <div class="download-section">
             <h2>Ready to Transform Your Learning?</h2>
-            <p>Join thousands of students boosting their study efficiency with BrainFlash AI</p>
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" class="btn btn-large btn-primary">
+            <p>Join students and professionals boosting their study efficiency with BrainFlash AI</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ttech.brainflashai" class="btn btn-large btn-primary">
                 <i class="fab fa-google-play"></i> Get it on Google Play
             </a>
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Free download • No ads • Privacy focused</p>
+            <div style="margin-top: 2rem;">
+                <a href="privacy-policy.html" style="color: var(--primary); text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
+                <a href="mailto:rohant0900@gmail.com" style="color: var(--primary); text-decoration: none; margin: 0 1rem;">Contact</a>
+            </div>
         </div>
 
         <!-- FOOTER -->
         <footer>
-            <p>Made with ❤️ by Rohan Tiwari</p>
-            <p>Version 1.0 • BrainFlash AI</p>
+            <p>Made with 🧡 by Rohan Tiwari</p>
+            <p>Version 1.1.0 • BrainFlash AI</p>
         </footer>
     </div>
 
